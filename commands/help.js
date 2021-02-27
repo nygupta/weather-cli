@@ -1,3 +1,5 @@
+const chalk = require('chalk');
+
 const menus = {
     main:`
         weather [command] <options>
@@ -20,5 +22,5 @@ module.exports = (args) => {
     const subCmd = args._[0] === 'help'
         ? args._[1]
         : args._[0]
-    console.log(menus[subCmd] || menus.main);
+    console.log(chalk.red(menus[subCmd] || menus.main));
 }

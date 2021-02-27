@@ -1,4 +1,5 @@
 const minimist = require('minimist');
+const chalk = require('chalk'); 
 
 module.exports = () => {
     const args = minimist(process.argv.slice(2));
@@ -21,7 +22,7 @@ module.exports = () => {
             require('./commands/forecast')(args);
             break;
         default:
-            console.log(`"${cmd} is not a valid command!"`);
+            console.log(chalk.red(`"${cmd} is not a valid command!"`));
             require('./commands/help')(args);
             break;
     }
