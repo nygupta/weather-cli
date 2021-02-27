@@ -40,7 +40,7 @@ Help
 $ weather help
 ```
 
-## App Info
+### App Info
 
 Developer - Nilay Gupta
 
