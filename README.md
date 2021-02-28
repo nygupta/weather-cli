@@ -3,7 +3,14 @@
 Command line interface to forecast weather.
 Uses (open weather global services) API.
 
-### Installation
+
+#### Clone the Repository 
+
+```sh
+$ git clone https://github.com/nygupta/weather-cli.git
+```
+
+#### Installation
 
 Install the dependencies
 
@@ -11,13 +18,13 @@ Install the dependencies
 $ npm install
 ```
 
-### Create Symlink
+#### Create Symlink
 
 ```sh
 $ npm link
 ```
 
-### Commands
+#### Commands
 
 Show current condition of a city
 ```sh
@@ -40,7 +47,7 @@ Help
 $ weather help
 ```
 
-### App Info
+#### App Info
 
 Developer - Nilay Gupta
 
