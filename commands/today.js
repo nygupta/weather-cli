@@ -13,12 +13,13 @@ module.exports = async (args) => {
         snipper.stop();
     }
     else {
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=095779bc6aa304458a5d790560e79afe`;
+        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=095779bc6aa304458a5d790560e79afe`;
         request(url, (err, response, body) => {
             try {
                 const data = JSON.parse(body);
-                console.log(chalk.cyan(`Current condition in ${data.name}:`));
-                console.log(`\t${data.main.temp}°C \t ${data.weather[0].main}`);
+                console.log(chalk.cyan(`Current condition in ${data.city.name}:`));
+                console.log(`\t${data.list[0].main.temp}°C \t${data.list[0].weather[0].description}`);
+                console.log(`\tHumidity: ${data.list[0].main.humidity}`);
                 snipper.stop();
             }
             catch(err) {

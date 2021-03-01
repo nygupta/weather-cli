@@ -20,8 +20,8 @@ module.exports = async (args) => {
                 console.log(chalk.cyan(`Weather Forecast for ${data.city.name}:`));
                 for (var i = 0; i < 40; i = i + 8){
                     const date = data.list[i].dt_txt;
-                    const avg_temp = data.list[i].main.temp_min;
-                    console.log(`\tDate: ${date[8]}${date[9]}${date[7]}${date[5]}${date[6]} \t Avg Temp: ${avg_temp}°C \t ${data.list[i].weather[0].description}`);
+                    const temp = data.list[i].main.temp_min;
+                    console.log(`\tDate: ${date[8]}${date[9]}${date[7]}${date[5]}${date[6]} \t Temperatuer: ${temp}°C \t ${data.list[i].weather[0].description}`);
                 }
                 snipper.stop();
             }
